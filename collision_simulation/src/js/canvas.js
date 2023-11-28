@@ -26,6 +26,13 @@ addEventListener('resize', () => {
   init()
 })
 
+function getDistance(x1, y1, x2, y2) {
+  const xDist = x2 - x1
+  const yDist = y2 - y1
+
+  return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2))
+}
+
 // Objects
 class Circle {
   constructor(x, y, radius, color) {
@@ -74,6 +81,15 @@ function animate() {
   circle2.x = mouse.x;
   circle2.y = mouse.y;
   circle2.update()
+
+  if (getDistance(circle1.x, circle1.y, circle2.x, circle2.y) < circle1.radius + circle2.radius) {
+    circle1.color = 'red';
+    circle2.color = 'blue';
+  } else {
+    circle1.color = 'blue';
+    circle2.color = 'red';
+
+  }
   // objects.forEach(object => {
   //  object.update()
   // })
