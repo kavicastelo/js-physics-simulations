@@ -1,1 +1,0 @@
-Copyrights received by [matthias-research](https://github.com/matthias-research/pages/blob/master/tenMinutePhysics/17-fluidSim.html)
