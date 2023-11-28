@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1023feb9-284b-4176-8a82-ae3d07dabbb8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/collision_simulation/src/js/util-elastic-collision.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collision_simulation/dist/js/canvas.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/collision_simulation/dist/js/canvas.bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collision_simulation/dist/js/canvas.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/collision_simulation/dist/js/canvas.bundle.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collision_simulation/src/js/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/collision_simulation/src/js/canvas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collision_simulation/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/collision_simulation/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,7 @@
       <workItem from="1701087414086" duration="3143000" />
       <workItem from="1701095084400" duration="1868000" />
       <workItem from="1701173918008" duration="105000" />
-      <workItem from="1701174081501" duration="4329000" />
+      <workItem from="1701174081501" duration="12347000" />
     </task>
     <servers />
   </component>

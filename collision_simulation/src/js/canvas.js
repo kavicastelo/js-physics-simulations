@@ -1,98 +1,122 @@
 import utils from './utils'
+import elasticCollision from './util-elastic-collision'
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-canvas.width = innerWidth
-canvas.height = innerHeight
+canvas.width = innerWidth - 20
+canvas.height = innerHeight - 20
 
 const mouse = {
-  x: innerWidth / 2,
-  y: innerHeight / 2
+    x: innerWidth / 2,
+    y: innerHeight / 2
 }
 
-const colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66']
+const colors = ['#2185C5', '#7ECEFD', '#55FFE5', '#FF7F66']
 
 // Event Listeners
 addEventListener('mousemove', (event) => {
-  mouse.x = event.clientX
-  mouse.y = event.clientY
+    mouse.x = event.clientX
+    mouse.y = event.clientY
 })
 
 addEventListener('resize', () => {
-  canvas.width = innerWidth
-  canvas.height = innerHeight
+    canvas.width = innerWidth - 20
+    canvas.height = innerHeight - 20
 
-  init()
+    init()
 })
 
-function getDistance(x1, y1, x2, y2) {
-  const xDist = x2 - x1
-  const yDist = y2 - y1
-
-  return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2))
-}
-
 // Objects
-class Circle {
-  constructor(x, y, radius, color) {
+function Particle(x, y, radius, color) {
     this.x = x
     this.y = y
+    this.velocity = {
+        x: (Math.random() - 0.5) * 5,
+        y: (Math.random() - 0.5) * 5
+    }
     this.radius = radius
     this.color = color
-  }
+    this.mass = 1
+    this.opacity = 0
 
-  draw() {
-    c.beginPath()
-    c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
-    c.fillStyle = this.color
-    c.fill()
-    c.closePath()
-  }
+    this.draw = () => {
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
+        c.save()
+        c.globalAlpha = this.opacity
+        c.fillStyle = this.color
+        c.fill()
+        c.restore()
+        c.strokeStyle = this.color
+        c.stroke()
+        c.closePath()
+    }
 
-  update() {
-    this.draw()
-  }
+    this.update = particles => {
+        this.draw()
+
+        for (let i = 0; i < particles.length; i++) {
+            let distance = utils.distance(this.x, this.y, particles[i].x, particles[i].y)
+            if (this === particles[i]) continue;
+            if (distance - this.radius * 2 < 0) {
+                elasticCollision.resolveCollision(this, particles[i])
+            }
+        }
+        this.x += this.velocity.x
+        this.y += this.velocity.y
+
+        if (this.x - this.radius < 0 || this.x + this.radius > canvas.width) {
+            this.velocity.x = -this.velocity.x
+        }
+        if (this.y - this.radius < 0 || this.y + this.radius > canvas.height) {
+            this.velocity.y = -this.velocity.y
+        }
+
+        // mouse collision detection
+        if (utils.distance(mouse.x, mouse.y, this.x, this.y) < 100 && this.opacity < 0.2) {
+            this.opacity += 0.02
+        } else if(this.opacity > 0) {
+            this.opacity -= 0.02
+            this.opacity = Math.max(0, this.opacity)
+        }
+    }
 }
 
 // Implementation
-let objects
-let circle1;
-let circle2;
+let particles
+
 function init() {
-  // objects = []
+    particles = []
 
-  circle1 = new Circle(200, 200, 30, 'red');
-  circle2 = new Circle(undefined, undefined, 30, 'blue');
+    for (let i = 0; i < 200; i++) {
+        // let radius = utils.randomIntFromRange(50, 100)
+        let radius = 10
+        let color = utils.randomColor(colors)
+        let x = utils.randomIntFromRange(radius, canvas.width - radius)
+        let y = utils.randomIntFromRange(radius, canvas.height - radius)
 
-  for (let i = 0; i < 400; i++) {
-    // objects.push()
-  }
+        for (let j = 0; j < particles.length; j++) {
+            if (utils.distance(x, y, particles[j].x, particles[j].y) - radius * 2 < 0) {
+                x = utils.randomIntFromRange(radius, canvas.width - radius)
+                y = utils.randomIntFromRange(radius, canvas.height - radius)
+                j = -1
+            }
+        }
+
+        particles.push(new Particle(x, y, radius, color))
+        console.log(particles)
+    }
 }
 
 // Animation Loop
 function animate() {
-  requestAnimationFrame(animate)
-  c.clearRect(0, 0, canvas.width, canvas.height)
+    requestAnimationFrame(animate)
+    c.clearRect(0, 0, canvas.width, canvas.height)
 
-  // c.fillText('HTML CANVAS BOILERPLATE', mouse.x, mouse.y)
-
-  circle1.update()
-  circle2.x = mouse.x;
-  circle2.y = mouse.y;
-  circle2.update()
-
-  if (getDistance(circle1.x, circle1.y, circle2.x, circle2.y) < circle1.radius + circle2.radius) {
-    circle1.color = 'red';
-    circle2.color = 'blue';
-  } else {
-    circle1.color = 'blue';
-    circle2.color = 'red';
-
-  }
-  // objects.forEach(object => {
-  //  object.update()
-  // })
+    particles.forEach(particle => {
+        particle.update(particles)
+    })
 }
 
 init()
