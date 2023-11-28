@@ -124,9 +124,9 @@ addEventListener('resize', function () {
   init();
 }); // Objects
 
-var _Object = /*#__PURE__*/function () {
-  function Object(x, y, radius, color) {
-    _classCallCheck(this, Object);
+var Circle = /*#__PURE__*/function () {
+  function Circle(x, y, radius, color) {
+    _classCallCheck(this, Circle);
 
     this.x = x;
     this.y = y;
@@ -134,7 +134,7 @@ var _Object = /*#__PURE__*/function () {
     this.color = color;
   }
 
-  _createClass(Object, [{
+  _createClass(Circle, [{
     key: "draw",
     value: function draw() {
       c.beginPath();
@@ -150,14 +150,18 @@ var _Object = /*#__PURE__*/function () {
     }
   }]);
 
-  return Object;
+  return Circle;
 }(); // Implementation
 
 
 var objects;
+var circle1;
+var circle2;
 
 function init() {
-  objects = [];
+  // objects = []
+  circle1 = new Circle(200, 200, 30, 'red');
+  circle2 = new Circle(undefined, undefined, 30, 'blue');
 
   for (var i = 0; i < 400; i++) {// objects.push()
   }
@@ -166,8 +170,12 @@ function init() {
 
 function animate() {
   requestAnimationFrame(animate);
-  c.clearRect(0, 0, canvas.width, canvas.height);
-  c.fillText('HTML CANVAS BOILERPLATE', mouse.x, mouse.y); // objects.forEach(object => {
+  c.clearRect(0, 0, canvas.width, canvas.height); // c.fillText('HTML CANVAS BOILERPLATE', mouse.x, mouse.y)
+
+  circle1.update();
+  circle2.x = mouse.x;
+  circle2.y = mouse.y;
+  circle2.update(); // objects.forEach(object => {
   //  object.update()
   // })
 }
