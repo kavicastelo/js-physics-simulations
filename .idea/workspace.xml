@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1023feb9-284b-4176-8a82-ae3d07dabbb8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/collision_simulation/src/js/util-elastic-collision.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/starfield_simulation/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/starfield_simulation/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collision_simulation/dist/js/canvas.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/collision_simulation/dist/js/canvas.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collision_simulation/dist/js/canvas.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/collision_simulation/dist/js/canvas.bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collision_simulation/src/js/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/collision_simulation/src/js/canvas.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,18 +34,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/PROJECTS/HTML/js_simulations/collision_simulation",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/PROJECTS/HTML/js_simulations/collision_simulation&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\PROJECTS\HTML\js_simulations\collision_simulation" />
@@ -67,6 +65,8 @@
       <workItem from="1701095084400" duration="1868000" />
       <workItem from="1701173918008" duration="105000" />
       <workItem from="1701174081501" duration="12347000" />
+      <workItem from="1701251863672" duration="410000" />
+      <workItem from="1701252293890" duration="1990000" />
     </task>
     <servers />
   </component>
