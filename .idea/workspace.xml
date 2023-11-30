@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1023feb9-284b-4176-8a82-ae3d07dabbb8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/flocking_simulation/codespace_api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flocking_simulation/boid.js" beforeDir="false" afterPath="$PROJECT_DIR$/flocking_simulation/boid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flocking_simulation/flocking.js" beforeDir="false" afterPath="$PROJECT_DIR$/flocking_simulation/flocking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flocking_simulation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flocking_simulation/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starfield_simulation/readme.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +86,7 @@
       <workItem from="1701359592226" duration="152000" />
       <workItem from="1701359755296" duration="62000" />
       <workItem from="1701359853965" duration="115000" />
-      <workItem from="1701359973916" duration="2764000" />
+      <workItem from="1701359973916" duration="3804000" />
     </task>
     <servers />
   </component>

@@ -5,7 +5,7 @@ let width, height;
 const minVelocity = -3;
 const maxVelocity = 3;
 const allBoids = [];
-const boidSize = 20;
+const boidSize = 15;
 
 const boidCount = 300;
 
