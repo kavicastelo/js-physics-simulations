@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1023feb9-284b-4176-8a82-ae3d07dabbb8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/flocking_simulation/codespace_api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flocking_simulation/boid.js" beforeDir="false" afterPath="$PROJECT_DIR$/flocking_simulation/boid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flocking_simulation/flocking.js" beforeDir="false" afterPath="$PROJECT_DIR$/flocking_simulation/flocking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flocking_simulation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flocking_simulation/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starfield_simulation/readme.md" beforeDir="false" />
     </list>
-    <list default="true" id="1023feb9-284b-4176-8a82-ae3d07dabbb8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,20 +37,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/PROJECTS/HTML/js_simulations/collision_simulation&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/PROJECTS/HTML/js_simulations/flocking_simulation",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PROJECTS\HTML\js_simulations\flocking_simulation" />
       <recent name="E:\PROJECTS\HTML\js_simulations\collision_simulation" />
       <recent name="E:\PROJECTS\HTML\js_simulations\eulerian_fluid_simulation" />
       <recent name="E:\PROJECTS\HTML\js_simulations\wave_simulation" />
@@ -86,6 +90,7 @@
       <workItem from="1701359592226" duration="152000" />
       <workItem from="1701359755296" duration="62000" />
       <workItem from="1701359853965" duration="115000" />
+      <workItem from="1701359973916" duration="2764000" />
     </task>
     <servers />
   </component>
