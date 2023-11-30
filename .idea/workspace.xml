@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+    <list default="true" id="1023feb9-284b-4176-8a82-ae3d07dabbb8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <list default="true" id="1023feb9-284b-4176-8a82-ae3d07dabbb8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +52,21 @@
       <recent name="E:\PROJECTS\HTML\js_simulations\wave_simulation" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="js_simulations" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="js_simulations" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,6 +82,10 @@
       <workItem from="1701251863672" duration="410000" />
       <workItem from="1701252293890" duration="3564000" />
       <workItem from="1701359195422" duration="115000" />
+      <workItem from="1701359324821" duration="257000" />
+      <workItem from="1701359592226" duration="152000" />
+      <workItem from="1701359755296" duration="62000" />
+      <workItem from="1701359853965" duration="115000" />
     </task>
     <servers />
   </component>
