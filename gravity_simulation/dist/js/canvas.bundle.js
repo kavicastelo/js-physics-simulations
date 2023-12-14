@@ -112,7 +112,10 @@ var mouse = {
   x: innerWidth / 2,
   y: innerHeight / 2
 };
-var colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66']; // Event Listeners
+var colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66']; // Variables
+
+var gravity = 1;
+var friction = 0.95; // Event Listeners
 
 addEventListener('mousemove', function (event) {
   mouse.x = event.clientX;
@@ -148,9 +151,9 @@ var Ball = /*#__PURE__*/function () {
     key: "update",
     value: function update() {
       if (this.y + this.radius + this.dy > canvas.height) {
-        this.dy = -this.dy;
+        this.dy = -this.dy * friction;
       } else {
-        this.dy += 0.5;
+        this.dy += gravity;
       }
 
       this.y += this.dy;

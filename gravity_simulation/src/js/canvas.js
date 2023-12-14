@@ -13,6 +13,10 @@ const mouse = {
 
 const colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66']
 
+// Variables
+let gravity = 1
+let friction = 0.95
+
 // Event Listeners
 addEventListener('mousemove', (event) => {
   mouse.x = event.clientX
@@ -46,9 +50,9 @@ class Ball {
 
   update() {
     if (this.y + this.radius + this.dy > canvas.height) {
-      this.dy = -this.dy
+      this.dy = -this.dy * friction
     } else {
-      this.dy += 0.5
+      this.dy += gravity
     }
     this.y += this.dy
     this.draw()
