@@ -125,15 +125,19 @@ addEventListener('resize', function () {
   canvas.width = innerWidth;
   canvas.height = innerHeight;
   init();
+});
+addEventListener('click', function () {
+  init();
 }); // Objects
 
 var Ball = /*#__PURE__*/function () {
-  function Ball(x, y, dy, radius, color) {
+  function Ball(x, y, dx, dy, radius, color) {
     _classCallCheck(this, Ball);
 
     this.x = x;
     this.y = y;
     this.dy = dy;
+    this.dx = dx;
     this.radius = radius;
     this.color = color;
   }
@@ -145,6 +149,7 @@ var Ball = /*#__PURE__*/function () {
       c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
       c.fillStyle = this.color;
       c.fill();
+      c.stroke();
       c.closePath();
     }
   }, {
@@ -156,7 +161,12 @@ var Ball = /*#__PURE__*/function () {
         this.dy += gravity;
       }
 
+      if (this.x + this.radius + this.dx > canvas.width || this.x - this.radius <= 0) {
+        this.dx = -this.dx;
+      }
+
       this.y += this.dy;
+      this.x += this.dx;
       this.draw();
     }
   }]);
@@ -166,13 +176,20 @@ var Ball = /*#__PURE__*/function () {
 
 
 var ball;
-var objects;
+var balls;
 
 function init() {
-  objects = [];
-  ball = new Ball(canvas.width / 2, canvas.height / 2, 2, 10, 'red');
+  balls = [];
 
-  for (var i = 0; i < 400; i++) {// objects.push()
+  for (var i = 0; i < 400; i++) {
+    var radius = _utils__WEBPACK_IMPORTED_MODULE_0___default.a.randomIntFromRange(8, 20);
+    var x = _utils__WEBPACK_IMPORTED_MODULE_0___default.a.randomIntFromRange(radius, canvas.width - radius * 2);
+    var y = _utils__WEBPACK_IMPORTED_MODULE_0___default.a.randomIntFromRange(0, canvas.height - radius * 2);
+    var dx = _utils__WEBPACK_IMPORTED_MODULE_0___default.a.randomIntFromRange(-2, 2);
+    var dy = _utils__WEBPACK_IMPORTED_MODULE_0___default.a.randomIntFromRange(-2, 2);
+    var color = _utils__WEBPACK_IMPORTED_MODULE_0___default.a.randomColor(colors);
+    ball = new Ball(x, y, dx, dy, radius, color);
+    balls.push(ball);
   }
 } // Animation Loop
 
@@ -180,9 +197,10 @@ function init() {
 function animate() {
   requestAnimationFrame(animate);
   c.clearRect(0, 0, canvas.width, canvas.height);
-  ball.update(); // objects.forEach(object => {
-  //  object.update()
-  // })
+
+  for (var i = 0; i < balls.length; i++) {
+    balls[i].update();
+  }
 }
 
 init();
