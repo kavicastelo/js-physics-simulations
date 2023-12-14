@@ -124,17 +124,18 @@ addEventListener('resize', function () {
   init();
 }); // Objects
 
-var _Object = /*#__PURE__*/function () {
-  function Object(x, y, radius, color) {
-    _classCallCheck(this, Object);
+var Ball = /*#__PURE__*/function () {
+  function Ball(x, y, dy, radius, color) {
+    _classCallCheck(this, Ball);
 
     this.x = x;
     this.y = y;
+    this.dy = dy;
     this.radius = radius;
     this.color = color;
   }
 
-  _createClass(Object, [{
+  _createClass(Ball, [{
     key: "draw",
     value: function draw() {
       c.beginPath();
@@ -146,18 +147,27 @@ var _Object = /*#__PURE__*/function () {
   }, {
     key: "update",
     value: function update() {
+      if (this.y + this.radius + this.dy > canvas.height) {
+        this.dy = -this.dy;
+      } else {
+        this.dy += 0.5;
+      }
+
+      this.y += this.dy;
       this.draw();
     }
   }]);
 
-  return Object;
+  return Ball;
 }(); // Implementation
 
 
+var ball;
 var objects;
 
 function init() {
   objects = [];
+  ball = new Ball(canvas.width / 2, canvas.height / 2, 2, 10, 'red');
 
   for (var i = 0; i < 400; i++) {// objects.push()
   }
@@ -167,7 +177,7 @@ function init() {
 function animate() {
   requestAnimationFrame(animate);
   c.clearRect(0, 0, canvas.width, canvas.height);
-  c.fillText('HTML CANVAS BOILERPLATE', mouse.x, mouse.y); // objects.forEach(object => {
+  ball.update(); // objects.forEach(object => {
   //  object.update()
   // })
 }
