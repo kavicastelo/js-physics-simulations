@@ -27,10 +27,11 @@ addEventListener('resize', () => {
 })
 
 // Objects
-class Object {
-  constructor(x, y, radius, color) {
+class Ball {
+  constructor(x, y, dy, radius, color) {
     this.x = x
     this.y = y
+    this.dy = dy
     this.radius = radius
     this.color = color
   }
@@ -44,15 +45,23 @@ class Object {
   }
 
   update() {
+    if (this.y + this.radius + this.dy > canvas.height) {
+      this.dy = -this.dy
+    } else {
+      this.dy += 0.5
+    }
+    this.y += this.dy
     this.draw()
   }
 }
 
 // Implementation
+let ball
 let objects
 function init() {
   objects = []
 
+  ball = new Ball(canvas.width / 2, canvas.height / 2, 2, 10, 'red');
   for (let i = 0; i < 400; i++) {
     // objects.push()
   }
@@ -62,8 +71,7 @@ function init() {
 function animate() {
   requestAnimationFrame(animate)
   c.clearRect(0, 0, canvas.width, canvas.height)
-
-  c.fillText('HTML CANVAS BOILERPLATE', mouse.x, mouse.y)
+  ball.update()
   // objects.forEach(object => {
   //  object.update()
   // })
