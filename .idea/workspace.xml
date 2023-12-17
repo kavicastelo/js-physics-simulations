@@ -2,6 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1023feb9-284b-4176-8a82-ae3d07dabbb8" name="Changes" comment="" />
+    <list default="true" id="1023feb9-284b-4176-8a82-ae3d07dabbb8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/js_simulations.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wave_simulation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/wave_simulation/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wave_simulation/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wave_simulation/info.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wave_simulation/readme.md" beforeDir="false" />
+    </list>
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +28,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+
         <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+
       </list>
     </option>
   </component>
@@ -75,7 +96,11 @@
       <workItem from="1701516387549" duration="77000" />
       <workItem from="1702824003920" duration="1342000" />
       <workItem from="1702826949338" duration="552000" />
+
       <workItem from="1702827516609" duration="645000" />
+
+      <workItem from="1702827516609" duration="340000" />
+
     </task>
     <servers />
   </component>
