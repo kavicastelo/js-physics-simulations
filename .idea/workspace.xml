@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1023feb9-284b-4176-8a82-ae3d07dabbb8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-    </list>
+    <list default="true" id="1023feb9-284b-4176-8a82-ae3d07dabbb8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,9 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -75,7 +73,9 @@
       <workItem from="1701359973916" duration="4583000" />
       <workItem from="1701448443984" duration="3663000" />
       <workItem from="1701516387549" duration="77000" />
-      <workItem from="1702824003920" duration="739000" />
+      <workItem from="1702824003920" duration="1342000" />
+      <workItem from="1702826949338" duration="552000" />
+      <workItem from="1702827516609" duration="645000" />
     </task>
     <servers />
   </component>
